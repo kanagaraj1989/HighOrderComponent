@@ -4,9 +4,10 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import ConsoleLoggerComponent from './ConsoleLogger/ConsoleLoggerComponent'
 import  ToDoComponent from './ToDoList/ToDoComponent'
-
+import StateTestAppComponent from './StateTest/StateTestComponent'
+ReactDOM.render(<StateTestAppComponent />,  document.getElementById('root'));
 // ReactDOM.render(<ConsoleLoggerComponent />,  document.getElementById('root'));
-ReactDOM.render(<ToDoComponent />,  document.getElementById('root'));
+//ReactDOM.render(<ToDoComponent />,  document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

@@ -4,8 +4,13 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import ConsoleLoggerComponent from './ConsoleLogger/ConsoleLoggerComponent'
 import  ToDoComponent from './ToDoList/ToDoComponent'
-import StateTestAppComponent from './StateTest/StateTestComponent'
-ReactDOM.render(<StateTestAppComponent />,  document.getElementById('root'));
+//import StateTestAppComponent from './StateTest/StateTestComponent'
+import StateComponent from './StateTest/StateComponent'
+import CurrencyConverter from './RenderPropsPattern/CurrencyConverter'
+
+ReactDOM.render(<CurrencyConverter />, document.getElementById('root'))
+//ReactDOM.render(<StateComponent />, document.getElementById('root'))
+//ReactDOM.render(<StateTestAppComponent />,  document.getElementById('root'));
 // ReactDOM.render(<ConsoleLoggerComponent />,  document.getElementById('root'));
 //ReactDOM.render(<ToDoComponent />,  document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change

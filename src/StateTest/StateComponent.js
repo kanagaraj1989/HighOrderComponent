@@ -1,18 +1,28 @@
 import React, {Component} from 'react'
+import {compose, withState} from 'recompose'
 
-class StateComponent extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            toggle : props.toggle
-        }
-    }
+const Toggle = ({toggle, onToggleList}) =>(
+    <button type="button" onClick={onToggleList}>
+        {toggle ? 'Hide' : 'Show'}
+    </button>
+)
 
-    toggleList = toggle => this.setState(prevState => ({toggle : prevState.toggle}))
+const ToggleList = ({list}) => (
+    list.map( item => <li key={item}>{item}</li>)
+)
 
-    render() {
-        return this.props.children(this.state.toggle, this.toggleList)
-    }
+const StateComponent = ({list,toggle,onToggleList}) => {
+    return(
+        <div>
+            <Toggle toggle={toggle} onToggleList={()=>onToggleList(!toggle)}></Toggle>
+            {toggle && <ToggleList list={list}></ToggleList>}
+        </div>
+    )
 }
 
-export default StateComponent
+const StateComponentApp = compose(
+    withState('toggle','onToggleList', true),
+    withState('list',null,["kana","raj","Deepa","Lithvik","Pranav"])
+)(StateComponent)
+
+export default StateComponentApp

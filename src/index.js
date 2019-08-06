@@ -7,8 +7,10 @@ import  ToDoComponent from './ToDoList/ToDoComponent'
 //import StateTestAppComponent from './StateTest/StateTestComponent'
 import StateComponent from './StateTest/StateComponent'
 import CurrencyConverter from './RenderPropsPattern/CurrencyConverter'
+import AmountHocTest from './RenderPropsPattern/AmountHocTest'
 
-ReactDOM.render(<CurrencyConverter />, document.getElementById('root'))
+ReactDOM.render(<AmountHocTest />, document.getElementById('root'))
+//ReactDOM.render(<CurrencyConverter />, document.getElementById('root'))
 //ReactDOM.render(<StateComponent />, document.getElementById('root'))
 //ReactDOM.render(<StateTestAppComponent />,  document.getElementById('root'));
 // ReactDOM.render(<ConsoleLoggerComponent />,  document.getElementById('root'));
